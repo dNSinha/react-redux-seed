@@ -2,6 +2,7 @@ import React, { Component, lazy } from 'react';
 import { Route, Switch, Redirect, withRouter } from 'react-router';
 
 const Home = lazy(() => import("Components/home"));
+const NewPage = lazy(() => import("Components/newPage"));
 
 export class Routes extends React.Component {
 
@@ -13,24 +14,24 @@ export class Routes extends React.Component {
     }
 
     componentWillMount() {
-        
+
     }
 
     componentDidMount() {
-        
+
     }
 
     componentWillReceiveProps(nextProps) {
-        
+
     }
 
 
     componentDidUpdate(previousProps) {
-        
+
     }
 
     componentDidCatch() {
-        
+
     }
 
 
@@ -39,6 +40,7 @@ export class Routes extends React.Component {
             < Switch >
                 <Route exact path="/" component={() => (<Redirect to="home" />)} />
                 <Route exact path="/home" component={(props) => <Home {...props} />} />
+                <Route exact path="/newPage" component={(props) => <NewPage {...props} />} />
                 <Route path='*' exact={true} component={() => (<Redirect to="/home" />)} />
             </Switch >
         );

@@ -1,8 +1,18 @@
 import { combineReducers } from 'redux';
 import { userReducer } from './userReducer';
+import initialDataReducer from './initialDataReducer';
 
-export default combineReducers({
-    // the keys here are going to be the property of state that we are producing.
-    user_reducer: userReducer
 
+const appReducer = combineReducers({
+    initialDataReducer,
+    userReducer
 });
+
+const rootReducer = (state, action) => {
+    if (action.type === 'RESET_STATE') {
+        state = undefined;
+    }
+    return appReducer(state, action);
+}
+
+export default rootReducer;
