@@ -25,8 +25,35 @@ export class NewPage extends React.Component {
     render() {
         return (
             <div>
-                <p>NewPage Works!</p>
-                {/* <p>{this.props.initialData}</p> */}
+                <form>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationServer01">First name</label>
+                            <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required />
+                            <div class="valid-feedback">
+                                Looks good!
+                                </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationServer02">Last name</label>
+                            <input type="text" class="form-control is-invalid" id="validationServer02" value="Otto" required />
+                            <div class="valid-feedback">
+                                Looks good!
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationServer03">City</label>
+                            <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required />
+                            <div id="validationServer03Feedback" class="invalid-feedback">
+                                Please provide a valid city.
+                            </div>
+                        </div>
+
+                    </div>
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </form>
                 <button type="button" class="btn btn-primary" onClick={this.handleClick}>Primary</button>
             </div>
         );

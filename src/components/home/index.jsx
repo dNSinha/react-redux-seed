@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as StoreActions from 'Store/actions/storeActions';
+import './style.scss';
 
 export class Home extends React.Component {
 
@@ -30,7 +31,7 @@ export class Home extends React.Component {
   render() {
     return (
       <div>
-        <p>Home Works!</p>
+        <p className="home">Home Works!</p>
         <p>{process.env.GOOGLE_URL}</p>
         {this.state.sample}
         <button type="button" class="btn btn-primary" onClick={this.handleClick}>Primary</button>
