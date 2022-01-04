@@ -25,6 +25,7 @@ export class Home extends React.Component {
   }
 
   handleClick() {
+    console.log(this);
     this.props.history.push('/newPage');
   }
 
